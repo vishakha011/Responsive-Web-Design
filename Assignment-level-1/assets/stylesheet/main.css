@@ -69,7 +69,6 @@ body {
 }
 
 .container {
- /* max-width: 1200px; */
  max-width: 85%;
  margin: 0 auto;
  padding: 1.5rem 0;
@@ -81,18 +80,69 @@ body {
   align-items: center;
 }
 
-.flex {
-  display: flex;
-}
-
 a {
   text-decoration: none;
+  color: #fff;
 }
 
 .padding {
   padding: 4rem 0;
 }  
 
+img {
+  width: 100%;
+}
+
+.header,
+.footer {
+  background-color: #222946;
+}
+
+/*
+=============================================================
+Headings/Paragrahs
+=============================================================
+*/
+.heading,
+.section-heading {
+  font-weight: 500;
+  color: #020511;
+  font-family: 'Roboto Slab', serif;
+}
+
+.hero-text,
+.section-text {
+  color: #98999F;
+}
+
+.heading {
+  font-size: 2.5rem;
+}
+
+.hero-text {
+  font-size: 1.3rem;
+  margin: 1.5rem 0;
+  line-height: 1.5;
+}
+
+h2{
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.section-text {
+  line-height: 1.2;
+  margin: 1rem 0;
+}
+/*
+=============================================================
+Buttons
+=============================================================
+*/
 
 .btn {
   display: inline-block;
@@ -100,6 +150,7 @@ a {
   background-color: #37B667;
   border-radius: 5px;
 }
+
 .primary-btn {
   font-size: 1.5rem;
   padding: 1.3rem 2.8rem;
@@ -109,32 +160,31 @@ a {
   font-size: 1rem;
   padding: 1rem 2rem;
 }
+
 /*
 =============================================================
 Header
 =============================================================
 */
-.header,
-.footer {
-  background-color: #222946;
-}
 .header {
   text-transform: uppercase;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #37B667;
+  flex: 0 1 12%;
+} 
+
+.nav-menu {
+  display: flex;
 }
 
 .nav-menu-item a {
   font-size: 1.4rem;
   font-weight: 500;
-  color: #fff;
   margin-right: 20px;
   font-family: 'Roboto', sans-serif;
 }
+
 .nav-menu-item a:hover,
 .active a {
   color: #37B667;
@@ -145,7 +195,7 @@ Header
 Hero Section
 =============================================================
 */
-.hero {
+.hero-section {
   background-color:#E9ECFC;
 }
 
@@ -153,27 +203,6 @@ Hero Section
   flex: 0 1 45%;
 }
 
-.hero-heading {
-  font-size: 2.2rem;
-  font-weight: 500;
-  color: #020511;
-  font-family: 'Roboto Slab', serif;
-  /* margin-bottom: 10px; */
-}
-.hero-text {
-  font-size: 1.3rem;
-  color: #98999F;
-  margin: 1.5rem 0;
-  line-height: 1.5;
-}
-
-.figure {
-  /* flex: 0 1 54%; */
-}
-
-img {
-  width: 100%;
-}
 
 /*
 =============================================================
@@ -184,26 +213,7 @@ BLog Section
   flex: 0 1 31%;  
   margin-top: 2%;       
 }
-.text {
-  align-items: flex-start;
-}
 
-h2{
-  text-align: center;
-}
-.section-heading {
-  font-size: 2rem;
-  color: #020511;
-  font-weight: 500;
-  margin: 20px 0;
-  font-family: 'Roboto Slab', serif;
-}
-
-.section-text {
-  line-height: 1.2;
-  color: #98999F;
-  margin: 1rem 0;
-}
 
 /*
 =============================================================
@@ -215,6 +225,7 @@ Footer Section
   font-size: 1.8rem;
   padding: 1.8rem 0;
 }
+
 .icon {
   display: flex;
 }
@@ -222,6 +233,7 @@ Footer Section
 .fab {
   color: #BCC0D2;
   margin-right: 30px;
+  border-radius: 8px;
 }
 
 /*
@@ -235,7 +247,37 @@ Media Queries
   .flex-between {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding: 0 0 2rem 0;
+  }
+
+  .hero img {
+    margin: 2rem 0;
+  }
+
+  .logo {
+    max-width: 30%;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-section {
+    padding-bottom: 0px;
+  }
+
+  .blog{
+    padding-bottom: 1.5rem;
+  }
+
+  small {
+    margin-bottom: 1rem;
+  }
+
+  .fab {
+    margin-right: 0;
+    margin: 0 1rem;
   }
 }
