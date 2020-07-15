@@ -65,5 +65,177 @@ Custom Styles
 =============================================================
 */
 body {
-    font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+ /* max-width: 1200px; */
+ max-width: 85%;
+ margin: 0 auto;
+ padding: 1.5rem 0;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.padding {
+  padding: 4rem 0;
+}  
+
+
+.btn {
+  display: inline-block;
+  color: #fff;
+  background-color: #37B667;
+  border-radius: 5px;
+}
+.primary-btn {
+  font-size: 1.5rem;
+  padding: 1.3rem 2.8rem;
+}
+
+.secondary-btn {
+  font-size: 1rem;
+  padding: 1rem 2rem;
+}
+/*
+=============================================================
+Header
+=============================================================
+*/
+.header,
+.footer {
+  background-color: #222946;
+}
+.header {
+  text-transform: uppercase;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #37B667;
+}
+
+.nav-menu-item a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff;
+  margin-right: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+.nav-menu-item a:hover,
+.active a {
+  color: #37B667;
+}
+
+/*
+=============================================================
+Hero Section
+=============================================================
+*/
+.hero {
+  background-color:#E9ECFC;
+}
+
+.col-1-2 {
+  flex: 0 1 45%;
+}
+
+.hero-heading {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #020511;
+  font-family: 'Roboto Slab', serif;
+  /* margin-bottom: 10px; */
+}
+.hero-text {
+  font-size: 1.3rem;
+  color: #98999F;
+  margin: 1.5rem 0;
+  line-height: 1.5;
+}
+
+.figure {
+  /* flex: 0 1 54%; */
+}
+
+img {
+  width: 100%;
+}
+
+/*
+=============================================================
+BLog Section
+=============================================================
+*/
+.blog {
+  flex: 0 1 31%;  
+  margin-top: 2%;       
+}
+.text {
+  align-items: flex-start;
+}
+
+h2{
+  text-align: center;
+}
+.section-heading {
+  font-size: 2rem;
+  color: #020511;
+  font-weight: 500;
+  margin: 20px 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+.section-text {
+  line-height: 1.2;
+  color: #98999F;
+  margin: 1rem 0;
+}
+
+/*
+=============================================================
+Footer Section
+=============================================================
+*/
+.footer {
+  color: #BCC0D2;
+  font-size: 1.8rem;
+  padding: 1.8rem 0;
+}
+.icon {
+  display: flex;
+}
+
+.fab {
+  color: #BCC0D2;
+  margin-right: 30px;
+}
+
+/*
+=============================================================
+Media Queries
+=============================================================
+*/
+
+@media screen and (max-width: 768px) {
+
+  .flex-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
