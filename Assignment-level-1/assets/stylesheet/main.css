@@ -1,3 +1,15 @@
+:root {
+  --primary-color: #222946;
+  --accent:#37B667;
+  --heading-text:#020511;
+  --body-text:#98999F;
+  --bg-color: #E9ECFC;
+}
+
+html {
+  font-size: 16px;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
   License: none (public domain)
 */
@@ -64,14 +76,17 @@ Grid
 Custom Styles
 =============================================================
 */
+
 body {
   font-family: 'Roboto', sans-serif;
 }
 
 .container {
  max-width: 85%;
+ /* max-width: 1250px; */
  margin: 0 auto;
- padding: 1.5rem 0;
+ /* margin: 0 2rem; */
+ padding: 1rem 0;
 }
 
 .flex-between {
@@ -95,7 +110,8 @@ img {
 
 .header,
 .footer {
-  background-color: #222946;
+  /* background-color: #222946; */
+  background-color: var(--primary-color);
 }
 
 /*
@@ -106,17 +122,17 @@ Headings/Paragrahs
 .heading,
 .section-heading {
   font-weight: 500;
-  color: #020511;
+  color: var(--heading-text);
   font-family: 'Roboto Slab', serif;
 }
 
 .hero-text,
 .section-text {
-  color: #98999F;
+  color: var(--body-text);
 }
 
 .heading {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
 }
 
 .hero-text {
@@ -125,12 +141,12 @@ Headings/Paragrahs
   line-height: 1.5;
 }
 
-h2{
+.blog-section h2{
   text-align: center;
 }
 
 .section-heading {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 20px 0;
 }
 
@@ -147,13 +163,13 @@ Buttons
 .btn {
   display: inline-block;
   color: #fff;
-  background-color: #37B667;
+  background-color: var(--accent);
   border-radius: 5px;
 }
 
 .primary-btn {
   font-size: 1.5rem;
-  padding: 1.3rem 2.8rem;
+  padding: 1rem 2rem;
 }
 
 .secondary-btn {
@@ -181,13 +197,13 @@ Header
 .nav-menu-item a {
   font-size: 1.4rem;
   font-weight: 500;
-  margin-right: 20px;
+  margin-right: 2rem;
   font-family: 'Roboto', sans-serif;
 }
 
 .nav-menu-item a:hover,
 .active a {
-  color: #37B667;
+  color: var(--accent);
 }
 
 /*
@@ -196,13 +212,16 @@ Hero Section
 =============================================================
 */
 .hero-section {
-  background-color:#E9ECFC;
+  background-color:var(--bg-color);
 }
 
 .col-1-2 {
-  flex: 0 1 45%;
+  flex: 0 1 48%;
 }
 
+/* .figure {
+  flex: 0 1 50%;
+} */
 
 /*
 =============================================================
@@ -214,14 +233,17 @@ BLog Section
   margin-top: 2%;       
 }
 
-
+.blog img {
+  height: 250px;
+  object-fit: cover;
+}
 /*
 =============================================================
 Footer Section
 =============================================================
 */
 .footer {
-  color: #BCC0D2;
+  color: var(--body-text);
   font-size: 1.8rem;
   padding: 1.8rem 0;
 }
@@ -231,7 +253,7 @@ Footer Section
 }
 
 .fab {
-  color: #BCC0D2;
+  color: var(--body-text);
   margin-right: 30px;
   border-radius: 8px;
 }
@@ -243,15 +265,28 @@ Media Queries
 */
 
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  .container {
+    /* margin: 0 5rem; */
+  }
 
   .flex-between {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
   }
 
+  .nav-menu {
+    margin-bottom: 1rem;
+  }
+
+  .nav-menu-item a{
+    margin: 0 1rem;
+  }
   .hero {
     flex-direction: column-reverse;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 0 0 2rem 0;
   }
 
@@ -260,7 +295,7 @@ Media Queries
   }
 
   .logo {
-    max-width: 30%;
+    max-width: 15vw;
     margin-bottom: 1.5rem;
   }
 
@@ -277,7 +312,7 @@ Media Queries
   }
 
   .fab {
-    margin-right: 0;
-    margin: 0 1rem;
+    /* margin-right: 0; */
+    margin: 0.5rem 1rem;
   }
 }
